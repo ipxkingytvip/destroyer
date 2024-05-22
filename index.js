@@ -2,7 +2,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const { exec } = require('child_process');
 
 // Ganti dengan token bot Telegram Anda
-const token = '7171772628:AAEWAHteUe97UJ1W5fypWcBy5RqVm4uMZUg';
+const token = '5666691064:AAEc9SjtpIy79mvqxGPCcHufRH03LZNVSsU';
 
 // Inisialisasi bot dengan token
 const bot = new TelegramBot(token, { polling: true });
@@ -29,7 +29,7 @@ bot.on('message', (msg) => {
   logActivity(msg);
 
   // Menanggapi perintah /mix
-  if (command.startsWith('/mix')) {
+  if (command.startsWith('/BGMI')) {
     // Mengekstrak argumen dari pesan
     const args = command.split(' ');
     const url = args[1];
@@ -40,7 +40,7 @@ bot.on('message', (msg) => {
     // Memeriksa apakah format pesan benar
     if (args.length === 5 && url && time && thread && rate) {
       // Menjalankan file mix.js dengan argumen yang diberikan
-      exec(`node mix.js ${url} ${time} ${thread} ${rate}`, (error, stdout, stderr) => {
+      exec(`node IPxKINGYT.js ${url} ${time} ${thread} ${rate}`, (error, stdout, stderr) => {
         if (error) {
           console.error(`Error: ${error.message}`);
           bot.sendMessage(chatId, 'Successful');
@@ -57,7 +57,7 @@ bot.on('message', (msg) => {
       });
     } else {
       // Memberi tahu pengguna bahwa format pesan tidak benar
-      bot.sendMessage(chatId, 'Format pesan tidak benar. Gunakan format: /mix [url] [time] [thread] [rate]');
+      bot.sendMessage(chatId, 'BHSDK AISE DAAL /BGMI [url] [time] [thread] [rate]');
     }
   }
 });

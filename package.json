@@ -4,7 +4,7 @@
   "description": "Bot Telegram dengan Node.js",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node  IPxKINGYT.js"
   },
   "keywords": [
     "telegram",
